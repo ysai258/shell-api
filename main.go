@@ -62,7 +62,7 @@ func commandHandler(c *gin.Context) {
 	}
 	out, err := exec.Command(shell, shellArg, cmd.Command).CombinedOutput()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"ouput": string(out), "error": err.Error()})
+		c.JSON(http.StatusInternalServerError, gin.H{"output": string(out), "error": err.Error()})
 		return
 	}
 
